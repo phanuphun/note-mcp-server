@@ -133,6 +133,29 @@ server.registerTool(
     }
 );
 
+server.registerTool(
+    "delete_note",
+    {
+        description: "ลบ note จากชื่อไฟล์",
+        inputSchema: {
+            filename: z.string().describe("ชื่อไฟล์ที่ต้องการลบ เช่น my-note.md"),
+        },
+    },
+    async ({ filename }) => {
+        const filepath = path.join(NOTES_DIR, filename);
+        try {
+            await fs.unlink(filepath);
+            return {
+                content: [{ type: "text", text: `ลบ "${filename}" เรียบร้อยแล้ว` }],
+            };
+        } catch {
+            return {
+                content: [{ type: "text", text: `ไม่พบไฟล์ "${filename}"` }],
+            };
+        }
+    }
+);
+
 async function main() {
     const transport = new StdioServerTransport();
     await server.connect(transport);
