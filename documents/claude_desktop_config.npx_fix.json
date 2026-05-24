@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "note-mcp-server": {
+      "command": "node",
+      "args": [
+        "--import",
+        "tsx",
+        "C:\\Users\\User\\First\\my-works\\fiction-archive\\note-mcp-server\\src\\index.ts"
+      ],
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;C:\\Users\\User\\AppData\\Roaming\\npm"
+      }
+    }
+  }
+}

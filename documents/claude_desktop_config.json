@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "note-mcp-server": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "C:\\Users\\User\\First\\my-works\\fiction-archive\\note-mcp-server\\src\\index.ts"
+      ]
+    }
+  }
+}

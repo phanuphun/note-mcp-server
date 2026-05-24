@@ -1,0 +1,25 @@
+{
+  "name": "persernal-note-mcp-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}
